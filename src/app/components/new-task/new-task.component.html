@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title text-center">Destinos</h3>
+    </div>
+    <div class="card-body">
+        <form #myForm>
+            <div class="form-group">
+                <label for="">Nome do destino</label><input type="text" class="form-control" arial-describedby="title" name="title"
+                [(ngModel)]="newTask.title">
+            </div>
+            <div class="form-group">
+                <label for="">Descrição do destino</label>
+                <textarea class="form-control" name="description" [(ngModel)]="newTask.description"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="addTask()">Criar destino</button>
+        </form>
+    </div>
+</div>
