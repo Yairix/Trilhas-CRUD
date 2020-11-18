@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Trilhas"
+    }
+  },
+  "defaultProject": "Trilhas",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,26 @@
+
+ul {
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    margin-top: 60px;
+    background-color:  #202124;
+    
+}
+a {
+    text-decoration: none;
+    color: #e8eaed;
+    display: block;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: -18px ;
+    font-size: 20px;
+    padding: 20px 10px 0px 0px;
+}
+i {
+    width: 30px;
+    height: 20px;
+}
