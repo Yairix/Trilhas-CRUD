@@ -20,15 +20,19 @@ export class NewTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
   addTask() {
-    console.log("we will send the data", this.newTask)
+    console.log("we will send the data", this.newTask);
     this.listServ.addTask(this.newTask)
     this.myId ++;
+    console.log(this.myId);
     this.newTask = {
-      id: 0,
+      id: this.myId,
       title: "",
       description: ""
+      //TaskList.push(newTask)
     }
+    
   }
 
 }
