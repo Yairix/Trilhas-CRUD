@@ -22,29 +22,15 @@ export class ListTasksComponent implements OnInit {
   }
 
   deleteTask(_id){
+  
     Swal.fire({
-      title: 'Deseja apagar este ítem??',
-      showCancelButton: true,
-      showConfirmButton: true,
-    }).then((result) => {
-     
-      if (result.isConfirmed) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Deletado com sucesso!',
-          showConfirmButton: false,
-          timer: 1300});
-        this.listServ.deleteTask(_id)
-      } 
-    })
-    /* Swal.fire({
       title: 'Deseja apagar este ítem?',
       text: "Você não poderá reverter isso!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Sim, apaga isso!'
+      confirmButtonText: 'Sim!'
     }).then((result) => {
       if (result.isConfirmed) {
         this.listServ.deleteTask(_id)
@@ -55,8 +41,8 @@ export class ListTasksComponent implements OnInit {
           timer: 1300});
        
       }
-    }) */
-     // this.listServ.deleteTask(_id)
+    })
+    
   }
 
   getPositions(_id) {

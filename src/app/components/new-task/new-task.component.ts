@@ -14,7 +14,8 @@ export class NewTaskComponent implements OnInit {
   newTask = {
     id: this.myId,
     title: "",
-    description: ""
+    description: "",
+    imagen: ""
   }
   constructor(private listServ: TaskService) { }
 
@@ -30,7 +31,8 @@ export class NewTaskComponent implements OnInit {
     this.newTask = {
       id: this.myId,
       title: "",
-      description: ""
+      description: "",
+      imagen: ""
       //TaskList.push(newTask)
     }
     Swal.fire({
