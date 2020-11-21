@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from '../../models/Taks';
 import { TaskService } from '../../services/task.service'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-list-tasks',
@@ -21,7 +22,41 @@ export class ListTasksComponent implements OnInit {
   }
 
   deleteTask(_id){
-    this.listServ.deleteTask(_id);
+    Swal.fire({
+      title: 'Deseja apagar este ítem??',
+      showCancelButton: true,
+      showConfirmButton: true,
+    }).then((result) => {
+     
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Deletado com sucesso!',
+          showConfirmButton: false,
+          timer: 1300});
+        this.listServ.deleteTask(_id)
+      } 
+    })
+    /* Swal.fire({
+      title: 'Deseja apagar este ítem?',
+      text: "Você não poderá reverter isso!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sim, apaga isso!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.listServ.deleteTask(_id)
+        Swal.fire({
+          icon: 'success',
+          title: 'Deletado com sucesso!',
+          showConfirmButton: false,
+          timer: 1300});
+       
+      }
+    }) */
+     // this.listServ.deleteTask(_id)
   }
 
   getPositions(_id) {

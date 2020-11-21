@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../services/task.service';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-tasks',
@@ -22,6 +23,15 @@ export class TasksComponent implements OnInit {
   }
 
   editTask() {
+    Swal.fire({
+      icon: 'success',
+      title: 'Salvou com sucesso!',
+      showConfirmButton: false,
+      timer: 1300});
     this.listServ.editTask(this.taskFound)
+    //console.log("funcionando!")
+  }
+  cancelEdit() {
+    console.log("cancelando el beta")// Falta la función para que no guarde los cambios
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../services/task.service'
+import { TaskService } from '../../services/task.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-task',
@@ -32,7 +33,11 @@ export class NewTaskComponent implements OnInit {
       description: ""
       //TaskList.push(newTask)
     }
-    
+    Swal.fire({
+      icon: 'success',
+      title: 'Destino criado com sucesso!',
+      showConfirmButton: false,
+      timer: 1300});
   }
 
 }
