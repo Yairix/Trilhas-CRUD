@@ -3,9 +3,9 @@ import { TaskService } from '../../services/task.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-new-task',
-  templateUrl: './new-task.component.html',
-  styleUrls: ['./new-task.component.css']
+  selector: 'app-newTask',
+  templateUrl: './newTask.component.html',
+  styleUrls: ['./newTask.component.css']
 })
 export class NewTaskComponent implements OnInit {
 
