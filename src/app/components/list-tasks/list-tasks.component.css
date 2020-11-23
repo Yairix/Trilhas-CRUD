@@ -1,3 +1,29 @@
 .container1 {
     margin-top: 70px;
 }
+
+.btn-delet {
+    color: rgb(255 255 255);
+    background-color: #1b1b1b;
+    border-color: #272727;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    border: 1px solid rgb(0 0 0 / 0%);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    align-items: flex-start;
+    margin-left: 8px;
+}
+
+.btn-delet:hover {
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+    background-color: #f10000;
+    border-color: #ec0000;
+    box-shadow: black;
+}

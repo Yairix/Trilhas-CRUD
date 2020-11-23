@@ -22,17 +22,17 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="card " >
-                    <img class="card-img-top" src='{{ task.imagen }}' alt="Card image cap">
+                <div class="card" >
+                    <img class="card-img-top" src='{{ task.imagen }}' alt="Card image cap" onclick="alert('hola')">
                     <div class="card-body">
                       <h5 class="card-title">{{task.title}}</h5>
                       <p class="card-text">{{task.description}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Tempo médio: 45 min / 1h</li>
-                      <li class="list-group-item">Distância: 1.5 km</li>
-                      <li class="list-group-item">Altura: 533 m</li>
-                      <li class="list-group-item">Dificuldade: Moderada</li>
+                      <li class="list-group-item form-control-sm">Tempo médio: {{task.tempo}}</li>
+                      <li class="list-group-item form-control-sm">Distância: {{task.distancia}} km</li>
+                      <li class="list-group-item form-control-sm">Altura: {{task.altura}} m</li>
+                      <li class="list-group-item form-control-sm">Dificuldade: {{task.dificuldade}}</li>
                     </ul>
                     <div class="card-body row justify-content-around">
                         <button type="button" class="btn btn-warning" (click)="getPositions(task.id)" data-toggle="modal" data-target="#editModal"><i style="font-size:24px;color:#000000" class="fas">&#xf303;</i></button>

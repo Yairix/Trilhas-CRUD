@@ -15,7 +15,11 @@ export class NewTaskComponent implements OnInit {
     id: this.myId,
     title: "",
     description: "",
-    imagen: ""
+    imagen: "",
+    tempo: "",
+    distancia: "",
+    altura: "",
+    dificuldade: "",
   }
   constructor(private listServ: TaskService) { }
 
@@ -32,7 +36,11 @@ export class NewTaskComponent implements OnInit {
       id: this.myId,
       title: "",
       description: "",
-      imagen: ""
+      imagen: "",
+      tempo: "",
+      distancia: "",
+      altura: "",
+      dificuldade: "",
       //TaskList.push(newTask)
     }
     Swal.fire({

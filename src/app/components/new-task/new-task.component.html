@@ -5,15 +5,46 @@
     <div class="card-body">
         <form #myForm>
             <div class="form-group">
-                <label for="">Nome do destino</label><input type="text" class="form-control" arial-describedby="title" name="title"
+                <label for="">Nome do destino</label><input type="text" class="form-control form-control-sm" arial-describedby="title" name="title"
                 [(ngModel)]="newTask.title">
             </div>
             <div class="form-group">
                 <label for="">Descrição do destino</label>
-                <textarea class="form-control" name="description" [(ngModel)]="newTask.description"></textarea>
+                <textarea class="form-control form-control-sm" rows="2" name="description" [(ngModel)]="newTask.description"></textarea>
             </div>
+            <div class="form-group">
+                <label for="">Tempo médio:</label>
+                <div class="col-sm-20">
+                    <input type="text" class="form-control form-control-sm" arial-describedby="tempo" name="tempo"
+                    [(ngModel)]="newTask.tempo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Distãncia:</label>
+                <div class="col-sm-20">
+                    <input type="text" class="form-control form-control-sm" arial-describedby="distancia" name="distancia"
+                    [(ngModel)]="newTask.distancia">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Altura:</label>
+                <div class="col-sm-20">
+                    <input type="text" class="form-control form-control-sm" arial-describedby="altura" name="altura"
+                    [(ngModel)]="newTask.altura">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1" >Dificuldade:</label>
+                <select class="form-control form-control-sm" id="exampleFormControlSelect1" arial-describedby="dificuldade" name="dificuldade"
+                [(ngModel)]="newTask.dificuldade">
+                    <option>Leve</option>
+                    <option>Moderado</option>
+                    <option>Pesado</option>
+                </select>
+            </div>
+              
 
-            <button type="submit" class="btn btn-outline-primary btn-lg btn-block" (click)="addTask()" >Criar destino</button>
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block" (click)="addTask()" >Criar destino</button>
         </form>
     </div>
 </div>
