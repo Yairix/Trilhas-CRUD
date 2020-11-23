@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slice-bar',
-  templateUrl: './slice-bar.component.html',
-  styleUrls: ['./slice-bar.component.css']
+  selector: 'app-sliceBar',
+  templateUrl: './sliceBar.component.html',
+  styleUrls: ['./sliceBar.component.css']
 })
 export class SliceBarComponent implements OnInit {
 
