@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Task } from '../../models/Taks';
-import { TaskService } from '../../services/task.service'
+import { TaskService } from '../../services/task.service';
 import Swal from 'sweetalert2'
 
 @Component({
