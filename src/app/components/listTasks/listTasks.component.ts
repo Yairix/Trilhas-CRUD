@@ -46,8 +46,11 @@ export class ListTasksComponent implements OnInit {
   }
 
   getPositions(_id) {
-    this.sendPosition.emit(_id)
-    
+    this.sendPosition.emit(_id);
+  }
+
+  cancelEdit2() {
+
   }
 
 }
