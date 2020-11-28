@@ -10,20 +10,44 @@
             </div>
             <div class="modal-body">
                 <form>
+
                     <div class="form-group">
-                        <label for="">Título</label>
+                        <label for="">Nome do destino</label>
                         <input *ngIf="taskFound" type="text" name="title" class="form-control" [(ngModel)]="taskFound.title">
                     </div>
+
                     <div class="form-group">
-                        <label for="">Descrição</label>
+                        <label for="">Descrição do destino</label>
                         <textarea *ngIf="taskFound" class="form-control" name="description" [(ngModel)]="taskFound.description"></textarea>
                     </div>
-                </form>
-            </div>
+
+                    <div class="form-group">
+                        <label for="">Tempo médio:</label>
+                        <textarea *ngIf="taskFound" class="form-control" name="tempo" [(ngModel)]="taskFound.tempo"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Distãncia:</label>
+                        <textarea *ngIf="taskFound" class="form-control" name="distancia" [(ngModel)]="taskFound.distancia"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Altura:</label>
+                        <textarea *ngIf="taskFound" class="form-control" name="altura" [(ngModel)]="taskFound.altura"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Dificuldade:</label>
+                        <select *ngIf="taskFound" class="form-control" name="dificuldade" [(ngModel)]="taskFound.dificuldade">
+                            <option>Leve</option>
+                            <option>Moderado</option>
+                            <option>Pesado</option>
+                    
+
+                
+            
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"(click)="cancelEdit()">Cancelar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"(click)="cancelEdit(taskFound)">Cancelar</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editTask()">Salvar</button>
             </div>
-        </div>
-    </div>
-</div>
+        
+    

@@ -11,6 +11,14 @@ export class TasksComponent implements OnInit {
 
   myTask
   taskFound
+  oldDescriptionValue: string 
+  oldTitleValue: string
+  oldTempoValue: string
+  oldDistanciaValue: string
+  oldAlturaValue: string
+  oldDificuldadeValue: string
+
+
 
   constructor(private listServ: TaskService) { }
 
@@ -29,9 +37,21 @@ export class TasksComponent implements OnInit {
       showConfirmButton: false,
       timer: 1300});
     this.listServ.editTask(this.taskFound)
-    //console.log("funcionando!")
+    // console.log("funcionando!")
   }
   cancelEdit() {
     console.log("cancelando el beta")// Falta la función para que no guarde los cambios
+    Swal.fire({
+      icon: 'error',
+      title: 'Cancelado!',
+      showConfirmButton: false,
+      timer: 1300});
+    
+      this.taskFound.title = this.oldTitleValue;
+      this.taskFound.description = this.oldDescriptionValue
+      this.taskFound.tempo = this.oldTempoValue
+      this.taskFound.distancia = this.oldDistanciaValue
+      this.taskFound.altura = this.oldAlturaValue
+      this.taskFound.dificuldade = this.oldDificuldadeValue
   }
 }
