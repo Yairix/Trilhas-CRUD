@@ -1,3 +1,11 @@
+
+#cont {
+    padding-top: 64px;
+
+    display: flex;
+    flex-direction: column;
+}
+
 /* Estilização Barra Lateral */
 #side {
     min-width: 80px;
@@ -6,7 +14,7 @@
     position: relative;
 }
 #slicebar {
-    background-image: linear-gradient(to right, #538BF0, #2DC7ED);
+    background-image: linear-gradient(to right, #f1f1f10f, #2DC7ED);
 
     color: #ffffff;
 
@@ -31,12 +39,18 @@
     align-items: center;
 }
 .barOption:hover {
-    background-image: linear-gradient(to right, #538BF0, #f1f1f1f1);
+    background-image: linear-gradient(to right, #2DC7ED, #f1f1f10f);
 }
 .barContent {
     margin: auto;
 
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 2s;
+    transition: visibility 0s, opacity 4s;
 }
+
+@media screen and (max-width: 767px) {
+    div#cont {
+      display: none;
+    }
+  }

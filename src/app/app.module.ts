@@ -8,7 +8,8 @@ import { NewTaskComponent } from './components/newTask/newTask.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { ListTasksComponent } from './components/listTasks/listTasks.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SliceBarComponent } from './sliceBar/sliceBar.component';
+import { SideBarComponent } from './sideBar/sideBar.component';
+// import { SideBarComponent } from './sideBar/sideBar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { SliceBarComponent } from './sliceBar/sliceBar.component';
     TasksComponent,
     ListTasksComponent,
     NavbarComponent,
-    SliceBarComponent
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
