@@ -18,8 +18,6 @@ export class TasksComponent implements OnInit {
   oldAlturaValue: string
   oldDificuldadeValue: string
 
-
-
   constructor(private listServ: TaskService) { }
 
   ngOnInit(): void {
@@ -27,7 +25,16 @@ export class TasksComponent implements OnInit {
 
   getPositions($event) {
     this.myTask = this.listServ.getOneTask($event)
-    this.taskFound = this.myTask
+    this.taskFound = this.myTask;
+    console.log(this.taskFound);
+    console.log(this.myTask);
+    this.oldTitleValue = this.taskFound.title;
+    this.oldDescriptionValue = this.taskFound.description;
+    this.oldTempoValue = this.taskFound.tempo;
+    this.oldDistanciaValue = this.taskFound.distancia;
+    this.oldAlturaValue = this.taskFound.altura;
+    this.oldDificuldadeValue = this.taskFound.dificuldade;
+
   }
 
   editTask() {
@@ -37,21 +44,15 @@ export class TasksComponent implements OnInit {
       showConfirmButton: false,
       timer: 1300});
     this.listServ.editTask(this.taskFound)
-    // console.log("funcionando!")
+    //console.log("funcionando!")
   }
   cancelEdit() {
-    console.log("cancelando el beta")// Falta la función para que no guarde los cambios
-    Swal.fire({
-      icon: 'error',
-      title: 'Cancelado!',
-      showConfirmButton: false,
-      timer: 1300});
-    
-      this.taskFound.title = this.oldTitleValue;
-      this.taskFound.description = this.oldDescriptionValue
-      this.taskFound.tempo = this.oldTempoValue
-      this.taskFound.distancia = this.oldDistanciaValue
-      this.taskFound.altura = this.oldAlturaValue
-      this.taskFound.dificuldade = this.oldDificuldadeValue
+    //console.log("cancelando el beta");
+    this.taskFound.title = this.oldTitleValue;
+    this.taskFound.description = this.oldDescriptionValue;
+    this.taskFound.tempo = this.oldTempoValue;
+    this.taskFound.distancia = this.oldDistanciaValue;
+    this.taskFound.altura = this.oldAlturaValue;
+    this.taskFound.dificuldade = this.oldDificuldadeValue;
   }
 }
