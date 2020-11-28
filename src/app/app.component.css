@@ -1,2 +1,7 @@
+#barcontent {
+    padding-top: 64px;
 
+    display: flex;
+    flex-direction: row;
+}
 

@@ -1,27 +1,17 @@
 <div class="container1">
-    <h3 class="ml-3">Meus destinos</h3>
-
+    <div class="container visible">
+        <h3 class="Meu">Meus destinos</h3>
+    </div>
+    
     <div class="col-md-12">
         <div class="row">
+            <div class="col-md-4">
+                <app-newTask></app-newTask>
+            </div>
+            <div class="container visible1">
+                <h3 class="Meu">Meus destinos</h3>
+            </div>
             <div class="col-md-4 mt-4" *ngFor="let task of myTasks; let i = index">
-                <!-- <div class="card">
-                    <div class="card-body">
-                        <h5>{{task.title}}</h5>
-                        <p class="card-text">{{task.description}}</p>
-
-                        <hr>
-
-                        <div class="row justify-content-between container">
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-warning" (click)="getPositions(task.id)" data-toggle="modal" data-target="#editModal">Edit</button>
-
-                            </div>
-                            <div class="col-md-6">                                
-                                <button type="button" class="btn btn-danger ml-2" (click)="deleteTask(i)">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="card" >
                     <img class="card-img-top" src='{{ task.imagen }}' alt="Card image cap" onclick="alert('hola')">
                     <div class="card-body">

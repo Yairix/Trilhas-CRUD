@@ -1,5 +1,17 @@
 .container1 {
     margin-top: 70px;
+    margin-left: 80px;
+}
+
+.Meu{
+    text-align: center;
+}
+
+.visible{
+    display: block;
+}
+.visible1{
+    display: none;
 }
 
 .btn-delet {
@@ -26,4 +38,17 @@
     background-color: #f10000;
     border-color: #ec0000;
     box-shadow: black;
+}
+
+@media (max-width: 767px) {
+    .container1 {
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+    .visible {
+        display:none;
+    }
+    .visible1 {
+        display:block;
+    }
 }
