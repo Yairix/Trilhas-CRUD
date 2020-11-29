@@ -49,6 +49,7 @@
     transition: visibility 0s, opacity 4s;
 }
 
+
 @media screen and (max-width: 767px) {
     div#cont {
       display: none;
