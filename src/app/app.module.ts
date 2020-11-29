@@ -9,6 +9,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { ListTasksComponent } from './components/listTasks/listTasks.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SliceBarComponent } from './sliceBar/sliceBar.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SliceBarComponent } from './sliceBar/sliceBar.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Index.HTML ja que no pc de Jesus na corre o jquery slim min, somente o uncompressed (By Jesus)
+/src/index.html
