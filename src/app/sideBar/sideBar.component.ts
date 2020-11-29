@@ -33,19 +33,46 @@ export class SideBarComponent implements OnInit {
     this.slice = $event
     console.log(this.slice)
 
-    if(this.slice){
+    if(visualViewport.width < 768){
 
-      this.renderer.setStyle(this.sliceBar.nativeElement, "width", "280px");
-      this.renderer.setStyle(this.side.nativeElement, "width", "280px");
-      this.opacity = '1';
-      this.visibility = 'visible';
+      if(this.slice){
+
+        this.renderer.setStyle(this.sliceBar.nativeElement, "width", "280px");
+        this.renderer.setStyle(this.side.nativeElement, "width", "280px");
+        this.renderer.setStyle(this.sliceBar.nativeElement, "visibility", "visible");
+        this.renderer.setStyle(this.side.nativeElement, "visibility", "visible");
+        this.opacity = '1';
+        this.visibility = 'visible';
+      } else {
+  
+        this.renderer.setStyle(this.sliceBar.nativeElement, "width", "0px");
+        this.renderer.setStyle(this.side.nativeElement, "width", "0px");
+        this.renderer.setStyle(this.sliceBar.nativeElement, "visibility", "hidden");
+        this.renderer.setStyle(this.side.nativeElement, "visibility", "hidden");
+        this.opacity = '0';
+        this.visibility = 'hidden';
+      }  
+
     } else {
 
-      this.renderer.setStyle(this.sliceBar.nativeElement, "width", "80px");
-      this.renderer.setStyle(this.side.nativeElement, "width", "80px");
-      this.opacity = '0';
-      this.visibility = 'hidden';
-    }  
+      if(this.slice){
+
+        this.renderer.setStyle(this.sliceBar.nativeElement, "width", "280px");
+        this.renderer.setStyle(this.side.nativeElement, "width", "280px");
+        this.renderer.setStyle(this.sliceBar.nativeElement, "visibility", "visible");
+        this.renderer.setStyle(this.side.nativeElement, "visibility", "visible");
+        this.opacity = '1';
+        this.visibility = 'visible';
+      } else {
+  
+        this.renderer.setStyle(this.sliceBar.nativeElement, "width", "80px");
+        this.renderer.setStyle(this.side.nativeElement, "width", "80px");
+        this.opacity = '0';
+        this.visibility = 'hidden';
+      }  
+    }
+
+    
 
   }
 
