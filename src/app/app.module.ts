@@ -8,7 +8,7 @@ import { NewTaskComponent } from './components/newTask/newTask.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { ListTasksComponent } from './components/listTasks/listTasks.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SliceBarComponent } from './sliceBar/sliceBar.component';
+import { SideBarComponent } from './sideBar/sideBar.component';
 import { routing } from './app.routing';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { routing } from './app.routing';
     TasksComponent,
     ListTasksComponent,
     NavbarComponent,
-    SliceBarComponent
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,
