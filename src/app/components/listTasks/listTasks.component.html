@@ -5,15 +5,15 @@
     
     <div class="col-md-12">
         <div class="row">
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <app-newTask></app-newTask>
-            </div>
+            </div> -->
             <div class="container-md col-md-12 visible1">
                 <h2 class="Meu col-md-4">Meus destinos</h2>
             </div>
             <div class="col-md-4 mt-4" *ngFor="let task of myTasks; let i = index">
                 <div class="card" >
-                    <img class="card-img-top" src='{{ task.imagen }}' alt="Card image cap" onclick="alert('hola')">
+                    <img class="card-img-top " src='{{ task.imagen }}' alt="Card image cap" onclick="alert('hola')">
                     <div class="card-body">
                       <h5 class="card-title">{{task.title}}</h5>
                       <p class="card-text">{{task.description}}</p>
