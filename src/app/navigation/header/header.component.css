@@ -1,0 +1,8 @@
+.logo {
+    padding: 0px 5px;
+    font-size: 20px;
+}
+
+mat-toolbar {
+    position: fixed;
+}
