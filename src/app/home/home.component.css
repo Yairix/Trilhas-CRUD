@@ -17,30 +17,3 @@ mat-tab-group {
 mat-tab-group p {
     padding-top: 20px;
 }
-
-
-section {
-    z-index: -1;
-}
-
-section {
-    background-image: url("./../../assets/06.jpg");
-    width: 100%;
-    background-attachment: fixed;
-    overflow: auto ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 40px;
-}
-
-section::-webkit-scrollbar {
-    width: 7px;
-    background: #202124a9;
-
-}
-
-section::-webkit-scrollbar-thumb {
-    background: #386fe6;
-    border-radius: 7px;
-}

@@ -6,7 +6,7 @@
                 <mat-icon>home</mat-icon>
                 <span class="logo">Trilhas Nacionas</span>
             </button>
-            <div *ngIf="!deviceXs">
+            <div *ngIf="!innerWidth">
                 <button routerLink="/home" mat-button>Home</button>
                 <button mat-button>Sobre Nos</button>
                 <button mat-button>Fale Conosco</button>
@@ -15,15 +15,15 @@
         
         <div>
             <button mat-icon-button (click)="onToggleSidenav()">
-                <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
-                <span *ngIf="!deviceXs">Menu</span>
+                <mat-icon *ngIf="innerWidth">more_vert</mat-icon>
+                <span *ngIf="!innerWidth">Menu</span>
             </button>
         </div>
         
     </mat-toolbar-row>
 
-    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between">
-        <button mat-button>Home</button>
+    <mat-toolbar-row *ngIf="innerWidth" fxLayoutAlign="space-between">
+        <button routerLink="/home" mat-button>Home</button>
         <button mat-button>Sobre Nos</button>
         <button mat-button>Fale Conosco</button>
     </mat-toolbar-row>

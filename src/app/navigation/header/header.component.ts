@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +7,20 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
 
-  @Input() deviceXs: boolean;
+  innerWidth: boolean;
   
   @Output() public sidenavToggle = new EventEmitter;
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
+
+  @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      
+      this.innerWidth = window.innerWidth <= 767 ? true : false;
+
+      console.log(innerWidth);
+      console.log(this.innerWidth);
+    }
 }

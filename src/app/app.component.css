@@ -6,16 +6,34 @@ mat-sidenav {
     width: 159px;
 }
 
-/* main {
-    padding: 10px;
-} */
-
 app-header{
     position: fixed;
     z-index: 2;
 }
 
-/* app-sidenav {
+/* #sidenav, app-sidenav {
     position: fixed;
-    z-index: 200;
+    z-index: 3;
 } */
+
+main {
+    background-image: url("./../assets/06.jpg");
+    width: 100%;
+    background-attachment: fixed;
+    overflow: auto ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: #202124a9;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #386fe6;
+    border-radius: 7px;
+}
