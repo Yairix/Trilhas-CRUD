@@ -9,6 +9,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { ListTasksComponent } from './components/listTasks/listTasks.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SideBarComponent } from './sideBar/sideBar.component';
+import { RecommendedComponent } from './components/recommended/recommended.component';
 // import { SideBarComponent } from './sideBar/sideBar.component';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SideBarComponent } from './sideBar/sideBar.component';
     TasksComponent,
     ListTasksComponent,
     NavbarComponent,
-    SideBarComponent
+    SideBarComponent,
+    RecommendedComponent
   ],
   imports: [
     BrowserModule,

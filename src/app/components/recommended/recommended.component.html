@@ -1,0 +1,17 @@
+<p>recommended works!</p>
+<!-- <app-listTasks (sendPosition)="getPositions($event)"></app-listTasks> -->
+<div class="col-md-4 mt-4" *ngFor="let task of myTasks; let i = index">
+    <div class="card" >
+        <img class="card-img-top " src='{{ task.imagen }}' alt="Card image cap" (click)="getPositions(task.id)">
+        <div class="card-body">
+          <h5 class="card-title">{{task.title}}</h5>
+          <p class="card-text">{{task.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item form-control-sm">Tempo médio: {{task.tempo}}</li>
+          <li class="list-group-item form-control-sm">Distância: {{task.distancia}} km</li>
+          <li class="list-group-item form-control-sm">Altura: {{task.altura}} m</li>
+          <li class="list-group-item form-control-sm">Dificuldade: {{task.dificuldade}}</li>
+        </ul>
+    </div>
+</div>
