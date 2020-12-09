@@ -1,16 +1,21 @@
 .container1 {
-    margin-top: 70px;
+    margin-top: 15px;
     margin-left: 80px;
 }
 
 .Meu{
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: black;
+    border-radius: 5px;
+    margin: auto;
 }
 
 .visible{
     display: block;
 }
 .visible1{
+    margin-top: 10px;
     display: none;
 }
 
@@ -42,7 +47,7 @@
 
 @media (max-width: 767px) {
     .container1 {
-        margin-top: 70px;
+        margin-top: 60px;
         margin-left: 0px;
     }
     .visible {
