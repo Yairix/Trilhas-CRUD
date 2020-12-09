@@ -1,22 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    background-image: url("./assets/06.jpg");
-    width: 100%;
-    background-attachment: fixed;
-    overflow: auto ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 40px;
-}
-
-body::-webkit-scrollbar {
-    width: 7px;
-    background: #202124a9;
-
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #386fe6;
-    border-radius: 7px;
-}
+html, body { height: 100%; margin: 0;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

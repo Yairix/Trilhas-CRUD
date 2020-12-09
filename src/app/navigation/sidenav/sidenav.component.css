@@ -1,0 +1,16 @@
+button {
+    color: black;
+}
+
+button:hover, button:active {
+    color: blue;
+}
+
+.nav-caption {
+    display: inline-block;
+    padding-left: 6px;
+}
+
+mat-nav-list {
+    position: fixed;
+}

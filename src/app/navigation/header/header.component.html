@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+
+        <div fxLoyout="row">
+            <button routerLink="/home" mat-button>
+                <mat-icon>home</mat-icon>
+                <span class="logo">Trilhas Nacionas</span>
+            </button>
+            <div *ngIf="!innerWidth">
+                <button routerLink="/home" mat-button>Home</button>
+                <button mat-button>Sobre Nos</button>
+                <button mat-button>Fale Conosco</button>
+            </div>
+        </div>
+        
+        <div>
+            <button mat-icon-button (click)="onToggleSidenav()">
+                <mat-icon *ngIf="innerWidth">more_vert</mat-icon>
+                <span *ngIf="!innerWidth">Menu</span>
+            </button>
+        </div>
+        
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="innerWidth" fxLayoutAlign="space-between">
+        <button routerLink="/home" mat-button>Home</button>
+        <button mat-button>Sobre Nos</button>
+        <button mat-button>Fale Conosco</button>
+    </mat-toolbar-row>
+
+</mat-toolbar>
