@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 })
 export class NewTaskComponent implements OnInit {
 
-  myId = 4;
+  myId = 7;
 
   newTask = {
     id: this.myId,
@@ -26,11 +26,19 @@ export class NewTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addImgagen() {
+    if(this.newTask.imagen == ""){
+      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
+    }
+  }
  
   addTask() {
     console.log("we will send the data", this.newTask);
     this.listServ.addTask(this.newTask)
     this.myId ++;
+    if(this.newTask.imagen == ""){
+      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
+    }
     console.log(this.myId);
     this.newTask = {
       id: this.myId,

@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-4 mt-4" *ngFor="let task of myTasks; let i = index">
                 <div class="card" >
-                    <img class="card-img-top" src='{{ task.imagen }}' alt="Card image cap" onclick="alert('hola')">
+                    <img class="card-img-top " src='{{ task.imagen }}' alt="Card image cap" (click)="getPositions(task.id)">
                     <div class="card-body">
                       <h5 class="card-title">{{task.title}}</h5>
                       <p class="card-text">{{task.description}}</p>
