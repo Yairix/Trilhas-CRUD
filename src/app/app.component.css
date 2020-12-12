@@ -1,5 +1,6 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
+    position: fixed;
 }
 
 mat-sidenav {
@@ -16,7 +17,7 @@ app-header{
     z-index: 3;
 } */
 
-main {
+/* main {
     background-image: url("./../assets/06.jpg");
     width: 100%;
     background-attachment: fixed;
@@ -25,9 +26,9 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 40px;
-}
+} */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 7px;
     background: #202124a9;
 
@@ -36,4 +37,4 @@ main {
 ::-webkit-scrollbar-thumb {
     background: #386fe6;
     border-radius: 7px;
-}
+} */
