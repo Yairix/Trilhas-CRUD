@@ -1,5 +1,16 @@
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
+    position: fixed;
+}
+.mat-drawer-backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    z-index: 3;
+    visibility: hidden;
 }
 
 mat-sidenav {
@@ -27,7 +38,7 @@ main {
     padding-bottom: 40px;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 7px;
     background: #202124a9;
 
@@ -36,4 +47,4 @@ main {
 ::-webkit-scrollbar-thumb {
     background: #386fe6;
     border-radius: 7px;
-}
+} */

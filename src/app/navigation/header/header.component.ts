@@ -20,7 +20,7 @@ export class HeaderComponent {
       
       this.innerWidth = window.innerWidth <= 767 ? true : false;
 
-      console.log(innerWidth);
-      console.log(this.innerWidth);
+     /*  console.log(innerWidth);
+      console.log(this.innerWidth); */
     }
 }
