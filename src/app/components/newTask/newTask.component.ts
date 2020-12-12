@@ -25,19 +25,13 @@ export class NewTaskComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  addImgagen() {
-    if(this.newTask.imagen == ""){
-      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
-    }
-  }
  
   addTask() {
     console.log("we will send the data", this.newTask);
     this.listServ.addTask(this.newTask)
     this.myId ++;
     if(this.newTask.imagen == ""){
-      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
+      this.newTask.imagen = "https://i.imgur.com/1mHU1fp.jpg";
     }
     console.log(this.myId);
     this.newTask = {

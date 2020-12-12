@@ -12,7 +12,7 @@ body { margin: 0;
     
 }
 
-.mat-drawer-backdrop {
+/* .mat-drawer-backdrop {
     top: 0;
     left: 0;
     right: 0;
@@ -21,7 +21,7 @@ body { margin: 0;
     display: block;
     z-index: 3;
     visibility: hidden;
-}
+} */
 
 
 ::-webkit-scrollbar {
