@@ -15,7 +15,7 @@ export class NewTaskComponent implements OnInit {
     id: this.myId,
     title: "",
     description: "",
-    imagem: "",
+    imagen: "",
     tempo: "",
     distancia: "",
     altura: "",
@@ -26,25 +26,25 @@ export class NewTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // addImgagen() {
-  //   if(this.newTask.imagen == ""){
-  //     this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
-  //   }
-  // }
+  addImgagen() {
+    if(this.newTask.imagen == ""){
+      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
+    }
+  }
  
   addTask() {
     console.log("we will send the data", this.newTask);
     this.listServ.addTask(this.newTask)
     this.myId ++;
-    if(this.newTask.imagem == ""){
-      this.newTask.imagem = "https://i.imgur.com/bekXpjJ.jpg";
+    if(this.newTask.imagen == ""){
+      this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
     }
     console.log(this.myId);
     this.newTask = {
       id: this.myId,
       title: "",
       description: "",
-      imagem: "",
+      imagen: "",
       tempo: "",
       distancia: "",
       altura: "",
