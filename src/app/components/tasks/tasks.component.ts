@@ -18,6 +18,7 @@ export class TasksComponent implements OnInit {
   oldAlturaValue: string
   oldDificuldadeValue: string
 
+
   constructor(private listServ: TaskService) { }
 
   ngOnInit(): void {
@@ -43,7 +44,7 @@ export class TasksComponent implements OnInit {
       title: 'Salvou com sucesso!',
       showConfirmButton: false,
       timer: 1300});
-    this.listServ.editTask(this.taskFound)
+    // this.listServ.editTask(_id, body)
     //console.log("funcionando!")
   }
   cancelEdit() {

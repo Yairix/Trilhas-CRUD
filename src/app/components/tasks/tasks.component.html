@@ -39,6 +39,10 @@
                             <option>Pesado</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="">Link da imagem:</label>
+                        <input *ngIf="taskFound" class="form-control" name="imagem" [(ngModel)]="taskFound.imagem">
+                    </div>
 
                 </form>
             </div>

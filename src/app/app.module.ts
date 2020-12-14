@@ -16,6 +16,7 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RecommendedComponent } from './components/recommended/recommended.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { RecommendedComponent } from './components/recommended/recommended.compo
     BrowserModule,
     FormsModule,
     RoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
