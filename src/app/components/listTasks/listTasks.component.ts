@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from '../../models/Taks';
 import { TaskService } from '../../services/task.service';
 import Swal from 'sweetalert2'
 
@@ -12,13 +11,18 @@ export class ListTasksComponent implements OnInit {
 
   @Output() sendPosition = new EventEmitter;
 
-  myTasks: Task[];
-
-  constructor(private listServ: TaskService) { }
+  // myTasks: Task;
+  Trilhas
+  constructor(private listServ: TaskService) { 
+    listServ.getTask().subscribe(Trilhas => {
+      this.Trilhas = Trilhas;
+      console.log(Trilhas);
+    });
+  }
 
   ngOnInit(): void {
-    this.myTasks = this.listServ.getTask()
-    console.log("My tasks: ", this.myTasks)
+    // this.myTasks = this.listServ.getTask()
+    // console.log("My tasks: ", this.myTasks)
   }
 
   deleteTask(_id){

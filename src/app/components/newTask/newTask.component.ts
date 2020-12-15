@@ -21,9 +21,11 @@ export class NewTaskComponent implements OnInit {
     altura: "",
     dificuldade: "",
   }
+  Trilhas
   constructor(private listServ: TaskService) { }
 
   ngOnInit(): void {
+  
   }
 
   addImgagen() {
@@ -33,8 +35,11 @@ export class NewTaskComponent implements OnInit {
   }
  
   addTask() {
-    console.log("we will send the data", this.newTask);
-    this.listServ.addTask(this.newTask)
+    // console.log("we will send the data", this.newTask);
+    this.listServ.addTask(this.newTask).subscribe(Trilhas => {
+      this.Trilhas = Trilhas;
+      console.log(Trilhas)
+    })
     this.myId ++;
     if(this.newTask.imagen == ""){
       this.newTask.imagen = "https://i.imgur.com/bekXpjJ.jpg";
