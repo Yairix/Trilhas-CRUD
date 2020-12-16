@@ -13,6 +13,9 @@ export class HeaderComponent {
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
+    let element = (document.querySelector(".mat-drawer-backdrop") as HTMLDivElement).style.position = 'fixed';
+    /* console.log(element);
+    console.log("funciona"); */
   }
 
   @HostListener('window:resize', ['$event'])
@@ -20,7 +23,7 @@ export class HeaderComponent {
       
       this.innerWidth = window.innerWidth <= 767 ? true : false;
 
-      console.log(innerWidth);
-      console.log(this.innerWidth);
+/*       console.log(innerWidth);
+      console.log(this.innerWidth); */
     }
 }

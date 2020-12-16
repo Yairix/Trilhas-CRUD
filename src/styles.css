@@ -1,2 +1,36 @@
 html, body { height: 100%; margin: 0;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: url("./assets/06.jpg");
+    width: 100%;
+    background-attachment: fixed;
+    overflow: auto ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+/* .mat-drawer-backdrop {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    z-index: 3;
+    visibility: hidden;
+} */
+
+
+::-webkit-scrollbar {
+    width: 7px;
+    background: #202124a9;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #386fe6;
+    border-radius: 7px;
+}

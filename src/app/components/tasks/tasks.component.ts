@@ -27,7 +27,7 @@ export class TasksComponent implements OnInit {
     this.myTask = this.listServ.getOneTask($event)
     this.taskFound = this.myTask;
     console.log(this.taskFound);
-    console.log(this.myTask);
+    /* console.log(this.myTask); */
     this.oldTitleValue = this.taskFound.title;
     this.oldDescriptionValue = this.taskFound.description;
     this.oldTempoValue = this.taskFound.tempo;
