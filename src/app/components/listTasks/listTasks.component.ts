@@ -13,6 +13,7 @@ export class ListTasksComponent implements OnInit {
   @Output() sendPosition = new EventEmitter;
 
   myTasks: Task[];
+  idDelete: any;
 
   constructor(private listServ: TaskService) { }
 
@@ -21,7 +22,7 @@ export class ListTasksComponent implements OnInit {
     console.log("My tasks: ", this.myTasks)
   }
 
-  deleteTask(_id){
+  deleteTask(idDelete){
   
     Swal.fire({
       title: 'Deseja apagar este ítem?',
@@ -33,7 +34,7 @@ export class ListTasksComponent implements OnInit {
       confirmButtonText: 'Sim!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.listServ.deleteTask(_id)
+        this.listServ.deleteTask(idDelete)
         Swal.fire({
           icon: 'success',
           title: 'Deletado com sucesso!',
@@ -47,6 +48,8 @@ export class ListTasksComponent implements OnInit {
 
   getPositions(_id) {
     this.sendPosition.emit(_id);
+    let idDelete = _id
+    console.log(idDelete)
   }
 
   cancelEdit2() {

@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 })
 export class NewTaskComponent implements OnInit {
 
-  myId = 7;
+  myId = 1;
 
   newTask = {
     id: this.myId,
