@@ -106,8 +106,11 @@ export class TaskService {
     return this.http.put(`http://localhost:3000/tasks/${_id}`, body)
   }
 
-  deleteTask(_id){
+  deleteTask(idDele){
     // TaskList.splice(_id, 1);
-    return this.http.delete(`http://localhost:3000/tasks/${_id}`)
+    // return this.http.delete(`http://localhost:3000/tasks/`+_id)
+    let url = "http://localhost:3000/tasks/"+idDele
+    console.log(url)
+    return this.http.delete(url);
   }
 }
