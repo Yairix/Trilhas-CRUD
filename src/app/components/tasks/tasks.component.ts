@@ -43,7 +43,7 @@ export class TasksComponent implements OnInit {
       title: 'Salvou com sucesso!',
       showConfirmButton: false,
       timer: 1300});
-    // this.listServ.editTask(this.taskFound)
+    this.listServ.editTask(this.taskFound)
     //console.log("funcionando!")
   }
   cancelEdit() {

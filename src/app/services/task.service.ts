@@ -1,10 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { from } from 'rxjs';
 import { Task } from '../models/Taks';
-
-
-
 
 const TaskList = [
   {
@@ -66,51 +61,36 @@ const TaskList = [
   "distancia": "2.3",
   "altura": "345",
   "dificuldade": "Moderada",
-  } 
+  }
+  
 ]
-
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
 
-  constructor( private http: HttpClient ) {  }
+  constructor() { }
 
-
-  getTaskReco() {
+  getTask(){
     return TaskList;
-  
-  }
-
-    getTask() {
-    // return TaskList;
-    return this.http.get('http://localhost:3000/tasks')
   }
 
   getOneTask(_id) {
-    // return TaskList.find(task => task.id === _id)
-    return this.http.get(`http://localhost:3000/tasks/${_id}`)
-  }
-  
-  addTask(newTask){
-    // TaskList.push(task);
-    return this.http.post('http://localhost:3000/tasks/', newTask)
+    return TaskList.find(task => task.id === _id)
   }
 
-  editTask(_id, body){
-    // const index = TaskList.findIndex(task => task.id === newTaskEdit.id)
-
-    // TaskList[index] = newTaskEdit;
-    return this.http.put(`http://localhost:3000/tasks/${_id}`, body)
+  addTask(task: Task){
+    TaskList.push(task);
   }
 
-  deleteTask(idDele){
-    // TaskList.splice(_id, 1);
-    // return this.http.delete(`http://localhost:3000/tasks/`+_id)
-    let url = "http://localhost:3000/tasks/"+idDele
-    console.log(url)
-    return this.http.delete(url);
+  editTask(newTaskEdit){
+    const index = TaskList.findIndex(task => task.id === newTaskEdit.id)
+
+    TaskList[index] = newTaskEdit;
+  }
+
+  deleteTask(_id){
+    TaskList.splice(_id, 1);
   }
 }

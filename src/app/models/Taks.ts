@@ -5,10 +5,9 @@ export interface Task {
     id: number;
     title: string;
     description: string;
-    imagen: string;
+    imagen: any;
     tempo: string;
     distancia: string;
     altura: string;
     dificuldade: any;
 }
-
