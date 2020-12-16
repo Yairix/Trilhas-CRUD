@@ -1,7 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from '../../models/Taks';
 import { TaskService } from '../../services/task.service';
 import Swal from 'sweetalert2'
+import { __importDefault } from 'tslib';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-listTasks',
@@ -12,16 +13,21 @@ export class ListTasksComponent implements OnInit {
 
   @Output() sendPosition = new EventEmitter;
 
-  myTasks: Task[];
-
-  constructor(private listServ: TaskService) { }
-
-  ngOnInit(): void {
-    this.myTasks = this.listServ.getTask()
-    console.log("My tasks: ", this.myTasks)
+  idDele: any;
+  Trilhas
+  constructor(private listServ: TaskService) { 
+    listServ.getTask().subscribe(Trilhas => {
+      this.Trilhas = Trilhas;
+      console.log(Trilhas);
+    });
   }
 
-  deleteTask(_id){
+  ngOnInit(): void {
+    // this.myTasks = this.listServ.getTask()
+    // console.log("My tasks: ", this.myTasks)
+  }
+
+  deleteTask(idDele){
   
     Swal.fire({
       title: 'Deseja apagar este ítem?',
@@ -33,7 +39,11 @@ export class ListTasksComponent implements OnInit {
       confirmButtonText: 'Sim!'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.listServ.deleteTask(_id)
+        this.listServ.deleteTask(idDele).subscribe(Trilhas => {
+          this.idDele = Trilhas;
+          console.log(Trilhas);
+          console.log(idDele);
+        });
         Swal.fire({
           icon: 'success',
           title: 'Deletado com sucesso!',
@@ -47,6 +57,8 @@ export class ListTasksComponent implements OnInit {
 
   getPositions(_id) {
     this.sendPosition.emit(_id);
+    let idDele = _id
+    console.log(idDele)
   }
 
   cancelEdit2() {

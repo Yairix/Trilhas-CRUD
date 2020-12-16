@@ -16,6 +16,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RecommendedComponent } from './components/recommended/recommended.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -28,13 +30,15 @@ import { RecommendedComponent } from './components/recommended/recommended.compo
     HeaderComponent,
     LayoutComponent,
     HomeComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
