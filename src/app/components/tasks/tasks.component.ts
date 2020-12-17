@@ -11,6 +11,8 @@ export class TasksComponent implements OnInit {
 
   myTask
   taskFound
+  OneTask
+  c: any
   oldDescriptionValue: string 
   oldTitleValue: string
   oldTempoValue: string
@@ -23,10 +25,15 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getPositions($event) {
-    this.myTask = this.listServ.getOneTask($event)
-    this.taskFound = this.myTask;
-    console.log(this.taskFound);
+  getPositions(_id) {
+    this.myTask = this.listServ.getOneTask(_id).subscribe(taskFound => {
+      this.OneTask = taskFound;
+      //console.log(this.taskFound)
+      console.log(this.OneTask)
+    })
+    //this.myTask = listServ.getOneTask($event)
+    //this.taskFound = this.myTask;
+    //console.log(this.taskFound);
     /* console.log(this.myTask); */
     this.oldTitleValue = this.taskFound.title;
     this.oldDescriptionValue = this.taskFound.description;
@@ -37,13 +44,33 @@ export class TasksComponent implements OnInit {
 
   }
 
-  editTask() {
+  editTask(a, b) {
     Swal.fire({
       icon: 'success',
       title: 'Salvou com sucesso!',
       showConfirmButton: false,
       timer: 1300});
-    this.listServ.editTask(this.taskFound)
+    /*   let c = {
+        "c.title" : "b.title",
+        "c.description" : "b.description",
+        "c.imagem" : "b.imagem",
+        "c.tempo" : "b.tempo",
+        "c.distancia" : "b.distancia",
+        "c.altura" : "b.altura",
+        "c.dificuldade" : "b.dificuldade"
+        
+      } */
+      this.listServ.editTask(a, b).subscribe(taskFound => {
+        this.OneTask = b
+        console.log(this.taskFound)
+        console.log(b)
+        //console.log(c)
+        console.log('hola')
+        location.reload();
+      })
+      /* this.listServ.editTask(_id, this.taskFound) */
+    //this.listServ.editTask(_id, this.taskFound).subscribe
+
     //console.log("funcionando!")
   }
   cancelEdit() {

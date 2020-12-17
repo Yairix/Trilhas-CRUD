@@ -1,17 +1,29 @@
-<p>recommended works!</p>
-<!-- <app-listTasks (sendPosition)="getPositions($event)"></app-listTasks> -->
-<!-- <div class="col-md-4 mt-4" *ngFor="let task of myTasks; let i = index">
-    <div class="card" >
-        <img class="card-img-top " src='{{ task.imagen }}' alt="Card image cap" (click)="getPositions(task.id)">
-        <div class="card-body">
-          <h5 class="card-title">{{task.title}}</h5>
-          <p class="card-text">{{task.description}}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item form-control-sm">Tempo médio: {{task.tempo}}</li>
-          <li class="list-group-item form-control-sm">Distância: {{task.distancia}} km</li>
-          <li class="list-group-item form-control-sm">Altura: {{task.altura}} m</li>
-          <li class="list-group-item form-control-sm">Dificuldade: {{task.dificuldade}}</li>
-        </ul>
+<div class="Container">
+  <div class="container-md col-md-12 visible1">
+    <h2 class="Meu col-md-6">Destinos recomendados</h2>
+  </div>
+
+  <div class="col-md-12 px-5 pt-2 ">
+    <div class="row">
+      <div class="col-md-4 mt-4" *ngFor="let task of recomendTasks; let i = index">
+          <div class="card" >
+              <img class="card-img-top " src='{{ task.imagem }}' alt="Card image cap" (click)="getPositions(task.id)">
+              <div class="card-body">
+                <h5 class="card-title">{{task.title}}</h5>
+                <p class="card-text">{{task.description}}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item form-control-sm">Tempo médio: {{task.tempo}}</li>
+                <li class="list-group-item form-control-sm">Distância: {{task.distancia}} km</li>
+                <li class="list-group-item form-control-sm">Altura: {{task.altura}} m</li>
+                <li class="list-group-item form-control-sm">Dificuldade: {{task.dificuldade}}</li>
+              </ul>
+              <button type="button" class="btn btn-success" (click)="salvada(task.id)" data-toggle="modal" data-target="#editModal">
+                <!-- <i style="font-size:24px;color:#000000" class="fas">&#xf303;</i> -->
+                Salvar
+              </button>
+          </div>
+      </div>
     </div>
-</div> -->
+  </div>
+</div>

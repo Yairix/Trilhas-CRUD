@@ -4,12 +4,12 @@
         <div fxLoyout="row">
             <button routerLink="/home" mat-button>
                 <mat-icon>home</mat-icon>
-                <span class="logo">Trilhas Nacionas</span>
+                <span class="logo">Trilhas</span>
             </button>
             <div *ngIf="!innerWidth">
                 <button routerLink="/home" mat-button>Home</button>
-                <button mat-button>Sobre Nos</button>
-                <button mat-button>Fale Conosco</button>
+                <button routerLink="/sobrenos" mat-button>Sobre Nos</button>
+                <button routerLink="/faleconosco" mat-button>Fale Conosco</button>
             </div>
         </div>
         

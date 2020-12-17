@@ -14,14 +14,14 @@
         <mat-icon>unfold_more</mat-icon>
     </mat-list-item>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="onSidenavClose()">Recomendadas</button>
+        <button mat-menu-item routerLink="/Recommended" (click)="onSidenavClose()">Recomendadas</button>
         <button mat-menu-item (click)="onSidenavClose()">Todas</button>
     </mat-menu>
-    <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+    <a mat-list-item routerLink="/sobrenos" (click)="onSidenavClose()">
         <mat-icon>sentiment_satisfied_alt</mat-icon>
         <span class="nav-caption">Sobre Nos</span>
     </a>
-    <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+    <a mat-list-item routerLink="/faleconosco" (click)="onSidenavClose()">
         <mat-icon>mail_outline</mat-icon>
         <span class="nav-caption">Fale Conosco</span>
     </a>
