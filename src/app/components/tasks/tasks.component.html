@@ -12,28 +12,28 @@
                 <form>
                     <div class="form-group">
                         <label for="">Título</label>
-                        <input *ngIf="taskFound" type="text" name="title" class="form-control" [(ngModel)]="taskFound.title">
+                        <input *ngIf="OneTask" type="text" name="title" class="form-control" [(ngModel)]="OneTask.Find.title">
                     </div>
                     <div class="form-group">
                         <label for="">Descrição</label>
-                        <input *ngIf="taskFound" class="form-control" name="description" [(ngModel)]="taskFound.description">
+                        <input *ngIf="OneTask" class="form-control" name="description" [(ngModel)]="OneTask.Find.description">
                     </div>
                     <div class="form-group">
                         <label for="">Tempo médio:</label>
-                        <input *ngIf="taskFound" class="form-control" name="tempo" [(ngModel)]="taskFound.tempo">
+                        <input *ngIf="OneTask" class="form-control" name="tempo" [(ngModel)]="OneTask.Find.tempo">
                     </div>
                     <div class="form-group">
                         <label for="">Distância:</label>
-                        <input *ngIf="taskFound" class="form-control" name="distancia" [(ngModel)]="taskFound.distancia">
+                        <input *ngIf="OneTask" class="form-control" name="distancia" [(ngModel)]="OneTask.Find.distancia">
                     </div>
 
                     <div class="form-group">
                         <label for="">Altura:</label>
-                        <input *ngIf="taskFound" class="form-control" name="altura" [(ngModel)]="taskFound.altura">
+                        <input *ngIf="OneTask" class="form-control" name="altura" [(ngModel)]="OneTask.Find.altura">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1" >Dificuldade:</label>
-                        <select *ngIf="taskFound" class="form-control" name="dificuldade" [(ngModel)]="taskFound.dificuldade">
+                        <select *ngIf="OneTask" class="form-control" name="dificuldade" [(ngModel)]="OneTask.Find.dificuldade">
                             <option>Leve</option>
                             <option>Moderado</option>
                             <option>Pesado</option>
@@ -41,14 +41,14 @@
                     </div>
                     <div class="form-group">
                         <label for="">Link da imagem:</label>
-                        <input *ngIf="taskFound" class="form-control" name="imagen" [(ngModel)]="taskFound.imagen">
+                        <input *ngIf="OneTask" class="form-control" name="imagen" [(ngModel)]="OneTask.Find.imagem">
                     </div>
 
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"(click)="cancelEdit()">Cancelar</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="editTask()">Salvar</button>
+                <button type="button" routerLink="/home"  class="btn btn-primary" data-dismiss="modal" (click)="editTask(OneTask.Find.id, OneTask.Find)">Salvar</button>
             </div>
         </div>
     </div>

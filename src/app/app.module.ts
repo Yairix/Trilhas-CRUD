@@ -16,6 +16,9 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { RecommendedComponent } from './components/recommended/recommended.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
+import { FaleconoscoComponent } from './faleconosco/faleconosco.component';
 
 
 @NgModule({
@@ -28,13 +31,16 @@ import { RecommendedComponent } from './components/recommended/recommended.compo
     HeaderComponent,
     LayoutComponent,
     HomeComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    SobrenosComponent,
+    FaleconoscoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

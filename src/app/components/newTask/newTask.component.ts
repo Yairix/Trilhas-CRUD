@@ -9,13 +9,13 @@ import Swal from 'sweetalert2';
 })
 export class NewTaskComponent implements OnInit {
 
-  myId = 7;
-
+  //myId = 7;
+  Trilhas
   newTask = {
-    id: this.myId,
+    //id: this.myId,
     title: "",
     description: "",
-    imagen: "",
+    imagem: "",
     tempo: "",
     distancia: "",
     altura: "",
@@ -27,18 +27,25 @@ export class NewTaskComponent implements OnInit {
   }
  
   addTask() {
-    console.log("we will send the data", this.newTask);
-    this.listServ.addTask(this.newTask)
-    this.myId ++;
-    if(this.newTask.imagen == ""){
-      this.newTask.imagen = "https://i.imgur.com/1mHU1fp.jpg";
-    }
-    console.log(this.myId);
+      /* console.log("we will send the data", this.newTask);
+      this.listServ.addTask(this.newTask) */
+      // console.log("we will send the data", this.newTask);
+      if(this.newTask.imagem == ""){
+        this.newTask.imagem = "https://i.imgur.com/1mHU1fp.jpg";
+      }
+      this.listServ.addTask(this.newTask).subscribe(Trilhas => {
+        this.Trilhas = Trilhas;
+        console.log(Trilhas)
+    })
+    //this.myId ++;
+    
+    location.reload();
+    //console.log(this.myId);
     this.newTask = {
-      id: this.myId,
+      //id: this.myId,
       title: "",
       description: "",
-      imagen: "",
+      imagem: "",
       tempo: "",
       distancia: "",
       altura: "",
