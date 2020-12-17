@@ -20,7 +20,8 @@ export class ListTasksComponent implements OnInit {
   constructor(private listServ: TaskService) {
     listServ.getTask().subscribe(tasks => {
       this.myTasks = tasks;
-      console.log(this.tasks.Tasks)
+      this.myTasks = this.myTasks.Tasks;
+      console.log(this.myTasks)
     })
    }
 
