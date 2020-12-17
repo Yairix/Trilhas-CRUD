@@ -1,0 +1,46 @@
+img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+figure{
+    text-align: center;
+    
+}
+
+.container{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+}
+
+
+h4 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.767);
+    color: black;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 220px;
+}
+
+@media (max-width: 767px) {
+    img {
+        width: 100px;
+        border-radius: 50%;
+    }
+    
+    h4 {
+        width: 130px;
+        text-align: center;
+        font-size: 1rem;
+        background-color: rgba(255, 255, 255, 0.767);
+        color: black;
+        border-radius: 5px;
+        margin-top: 15px;
+        
+    }
+    .container{
+        display: flex;
+    }
+}

@@ -13,45 +13,35 @@ export class RecommendedComponent implements OnInit {
 
   @Output() sendPosition = new EventEmitter;
 
-  myTasks: Task[];
+  myTasks
+  tasks: any
+  recomendTasks
+  TrilhasRecomend
 
-  constructor(private listServ: TaskService) { }
-
+  constructor(private listServ: TaskService) {
+    /* listServ.getTask().subscribe(tasks => {
+      this.recomendTasks = tasks;
+      console.log(this.tasks.Tasks)
+    }) */
+   }
   ngOnInit(): void {
-    /* this.myTasks = this.listServ.getTaskReco()
-    console.log("My tasks: ", this.myTasks) */
+    this.recomendTasks = this.listServ.getTaskRecomend()
+    console.log("My tasks: ", this.recomendTasks)
   }
 
-  deleteTask(_id){
-  
+  salvada(_id) {
     Swal.fire({
-      title: 'Deseja apagar este ítem?',
-      text: "Você não poderá reverter isso!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sim!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.listServ.deleteTask(_id)
-        Swal.fire({
-          icon: 'success',
-          title: 'Deletado com sucesso!',
-          showConfirmButton: false,
-          timer: 1300});
-       
-      }
-    })
-    
-  }
-
-  getPositions(_id) {
-    this.sendPosition.emit(_id);
-  }
-
-  cancelEdit2() {
+      icon: 'success',
+      title: 'Salvou com sucesso em Meu destinos!',
+      showConfirmButton: false,
+      timer: 1300});
+      this.listServ.addTask(this.recomendTasks[_id-1]).subscribe(Trilhas => {
+        this.TrilhasRecomend = Trilhas;
+        console.log(Trilhas);
+        console.log(this.TrilhasRecomend)
+        console.log(this.recomendTasks[_id-1])
+      });
 
   }
-
+  
 }

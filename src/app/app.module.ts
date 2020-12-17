@@ -40,7 +40,7 @@ import { FaleconoscoComponent } from './faleconosco/faleconosco.component';
     FormsModule,
     RoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
