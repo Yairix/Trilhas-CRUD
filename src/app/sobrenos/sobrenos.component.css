@@ -42,6 +42,9 @@ img {
         display: flex;
         flex-wrap: wrap;
     }
+    .sobre-nos {
+        position: absolute;
+    }
 
     img {
         margin: 30px;
